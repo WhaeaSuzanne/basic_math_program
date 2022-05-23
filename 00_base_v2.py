@@ -94,3 +94,4 @@ if __name__ == "__main__":
             print(random_num)
             print("go to random generator, send min_num and max_num (1 and 5)")
             print("then randomly go to each of the operand functions")
+
