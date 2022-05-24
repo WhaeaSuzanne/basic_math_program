@@ -3,7 +3,7 @@ game to ask basic math questions
 base component
 v1 - set up the skeleton of the program, test the functions are called as required
 v2 - trial random generator function component. Works well so will keep it
-V3 - add int checker function component to the base component
+V3 - add int checker function component to the base component - tested and running, trialled the questions for low and high num
 CC SA 2022
 
 '''
@@ -13,8 +13,18 @@ import random as r
 #set up functions**********************************************
 
 #function to check for integers. will loop until an integer is input
-def int_checker():
-    print("placeholder")
+#checked this and is working @25/5/22
+def int_checker(question, error_message):
+    x = True
+    while x == True:
+
+        try:
+            int_num = int(input(question))
+            x = False
+        except:
+            print(error_message)
+
+    return(int_num)
 
 
 #function to check string is within an allowable list. Will loop until an allowable word is input
@@ -72,6 +82,10 @@ if __name__ == "__main__":
 
     #ask user for low and high numbers
     #int checker to check its an integer, loop until suitable integer
+    low_num = int_checker("Please enter a low number: ", "This is not an integer - please enter an integer: ")
+    print(low_num)
+    high_num = int_checker("Please enter a high number: ", "This is not an integer - please enter an integer: ")
+    print(high_num)
 
     #ask user for number of questions to be asked
     #int checker to check on the integer
